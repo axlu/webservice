@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/*  Axel Lundqvist
+    Webbutveckling III
+    2018-10-15
+*/
+a, p, li, label {
+  font-family: "Roboto", sans-serif; }
+
+p {
+  line-height: 26px;
+  font-size: 1.2rem; }
+
+h1 {
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2rem;
+  color: #4b4543; }
+
+h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  color: #4b4543; }
+
+a {
+  text-decoration: none;
+  color: #4b4543; }
+
+img {
+  width: 100%; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url("../images/roof.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #fff; }
+
+#container {
+  min-height: 100%;
+  position: relative; }
+
+#header {
+  background: #fff;
+  padding: 10px;
+  height: 115px; }
+
+#body {
+  margin-top: 40px;
+  padding: 10px;
+  padding-bottom: 400px;
+  /* Height of the footer */ }
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+  /* Height of the footer */
+  background: #222222; }
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto; }
+
+.white {
+  background: #fff;
+  padding: 100px; }
+
+.logo {
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 20px; }
+
+.logo a {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  color: #4b4543;
+  width: 200px; }
+
+.mainmenu {
+  display: inline; }
+
+.mainmenu ul {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 40px; }
+
+.mainmenu li {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 60px; }
+
+.mainmenu a:hover {
+  color: #b2aba8; }
+
+.socials {
+  margin-top: 30px; }
+
+.socials a {
+  margin-right: 20px;
+  float: right; }
+
+.text {
+  padding: 30px; }
+
+.text3 {
+  margin: 100px 0 100px 0;
+  text-align: center;
+  height: 200px;
+  border-top: 1px solid #e2dfde;
+  border-bottom: 1px solid #e2dfde;
+  padding: 50px; }
+
+.textfoot {
+  text-align: center;
+  padding: 50px;
+  margin-top: 150px; }
+
+.textfoot p {
+  color: #cccccc; }
+
+/* ----------- service.php ------------ */
+.print {
+  background: #fff;
+  min-height: 600px; }
+
+.service_box {
+  background: #fff;
+  padding: 40px;
+  border-bottom: 1px solid #cac5c3;
+  border-right: 0.2px solid #cac5c3;
+  min-height: 280px; }
+
+.service_box h1 {
+  margin-bottom: 10px; }
+
+.delete-btn {
+  width: 80px; }
+
+/* ----------- about.php ------------ */
+.max_width {
+  max-width: 800px; }
+
+/* ----------- about.php ------------ */
+.contact {
+  text-align: center; }
+
+.print form {
+  padding-left: 40px; }
+
+.send {
+  width: 300px;
+  padding: 10px;
+  background: #f7f7f7;
+  border: 1px solid #4d9b44;
+  border-radius: 3px; }
+
+.menu {
+  visibility: hidden; }
+
+@media only screen and (max-width: 900px) {
+  .white {
+    padding: 10px; }
+  .socials {
+    position: absolute;
+    right: 60px;
+    top: 20px; }
+  .socials a {
+    font-size: 0.5rem; }
+  .logo {
+    margin-top: 30px; }
+  .logo a {
+    font-size: 1.5rem; }
+  .textfoot {
+    margin-top: 10px; }
+  .mainmenu {
+    visibility: hidden; }
+  .menu {
+    visibility: visible; }
+  .menu-btn {
+    position: absolute;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 50px;
+    cursor: pointer; }
+    .menu-btn .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background: #4d9b44; }
+    .menu-btn.close {
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      /* IE 9 */
+      -webkit-transform: rotate(180deg);
+      /* Safari 3-8 */
+      transition: all 0.4s ease-out; }
+      .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); }
+      .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0; }
+      .menu-btn.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px); }
+  .menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    /* Ändrar lite här */
+    pointer-events: none; }
+    .menu.show {
+      visibility: visible; }
+    .menu .menu-nav {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      float: right;
+      width: 80%;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: rgba(0, 0, 0, 0.822);
+      opacity: 0.9;
+      transform: translate3d(0, -100%, 0);
+      pointer-events: auto;
+      transition: all 0.4s ease-out; }
+      .menu .menu-nav.show {
+        transform: translate3d(0, 0, 0); }
+      .menu .menu-nav .nav-item a {
+        color: white;
+        font-size: 1.5rem;
+        line-height: 50px; }
+      .menu .menu-nav .nav-item a:hover {
+        color: #4b4543;
+        transition: all 0.4s ease-out; }
+  .print form {
+    padding-left: 0px; } }
+
+@media only screen and (max-width: 600px) {
+  .col-1 {
+    width: 8.33%; }
+  .col-2 {
+    width: 16.66%; }
+  .col-3 {
+    width: 25%; }
+  .col-25 {
+    width: 20%; }
+  .col-4 {
+    width: 100%; }
+  .col-5 {
+    width: 41.66%; }
+  .col-6 {
+    width: 100%; }
+  .col-7 {
+    width: 58.33%; }
+  .col-8 {
+    width: 66.66%; }
+  .col-9 {
+    width: 75%; }
+  .col-10 {
+    width: 83.33%; }
+  .col-11 {
+    width: 91.66%; }
+  .col-12 {
+    width: 100%; }
+  .service_box {
+    border-right: none; }
+  .text3 {
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  h1 {
+    font-size: 1.5rem; }
+  .print form {
+    padding-left: 0px; }
+  .send {
+    width: 100%; } }
